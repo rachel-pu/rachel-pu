@@ -25,7 +25,7 @@ export default function Home() {
 };
 
   return (
-      // dot background
+      // setting page background
       <div className="h-screen flex flex-col">
 
             {/* navbar */}
