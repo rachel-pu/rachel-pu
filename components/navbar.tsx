@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-          <nav className="flex flex-row justify-between items-center">
+          <div className="flex flex-row justify-between items-center p-20 ">
               <div className="text-2xl font-janitor text-[#2B2B2B]">rachel pu</div>
               <div className="w-[40%] flex flex-row justify-around">
                   <Link href="/" className="hover:underline text-[#2B2B2B] font-product-sans">Home</Link>
@@ -11,7 +11,7 @@ export default function Navbar() {
                   <Link href="/extracurriculars" className="hover:underline text-[#2B2B2B] font-product-sans">Extracurriculars</Link>
                   <Link href="/contact" className="hover:underline text-[#2B2B2B] font-product-sans">Contact</Link>
               </div>
-          </nav>
+          </div>
 
   );
 }

@@ -147,10 +147,7 @@ export default function Home() {
           {/* buttons */}
           <motion.div className="flex flex-row  mb-auto ml-auto mr-auto w-[40%] justify-around p-2"
                       initial={{ transform: "translateY(100px)", opacity: 0 }}
-                      animate={{ transform: "translateY(0px)", opacity: 1}}
-                      transition={{ type: "spring",
-                          stiffness: 80, // Lower value makes it less bouncy
-                          delay: 3,}}>
+                      animate={{ transform: "translateY(0px)", opacity: 1}}>
 
               {/* resume button */}
               <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
