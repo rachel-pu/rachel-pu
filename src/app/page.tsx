@@ -11,7 +11,7 @@ export default function Home() {
     // src: https://codesandbox.io/p/sandbox/framer-motion-5-1-line-drawing-ph6ln?file=%2Fsrc%2FApp.js%3A4%2C1-17%2C3&from-embed
     const draw = {
     hidden: { pathLength: 0, opacity: 0 },
-    visible: ({i}: { i: any }) => {
+    visible: ({i}: { i: number }) => {
         const delay = 1 + i * 0.5;
         return {
             pathLength: 1,
@@ -32,7 +32,7 @@ export default function Home() {
             <Navbar />
 
           {/* text and animated drawing */}
-          <div className=" items-center flex mt-auto mb-20 mr-auto ml-auto flex-row max-w-[60%] justify-between">
+          <div className=" items-center flex mt-[11.75%] mb-20 mr-auto ml-auto flex-row max-w-[60%] justify-between">
 
               {/* text*/}
               <div className="flex flex-col max-w-[70%]">
@@ -170,7 +170,7 @@ export default function Home() {
 
               {/* github */}
               <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
-                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: '#e79090', color: '#ECDED6'}}
+                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: '#8d65bb', color: '#ECDED6'}}
                              whileTap={{ scale: 0.95 }}
                              onClick={() => window.open('https://github.com/rachel-pu')}
               >
