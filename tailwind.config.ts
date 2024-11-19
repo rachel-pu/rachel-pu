@@ -20,6 +20,7 @@ export default {
         'dm-sans-medium': ['DM Sans Medium', 'sans-serif'],
         'dm-sans-italic': ['DM Sans Italic', 'sans-serif'],
         'dm-sans-extra-bold': ['DM Sans Extra Bold', 'sans-serif'],
+        'dm-sans-black': ['DM Sans Black', 'sans-serif'],
         'janitor': ['Janitor', 'sans-serif'],
       },
       backgroundImage: {

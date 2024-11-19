@@ -32,42 +32,49 @@ body {
 
 @font-face {
   font-family: 'DM Sans Regular';
-  src: url('/fonts/DMSans/DM_Sans-Regular.ttf') format('truetype');
+  src: url('/fonts/DMSans/DMSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Sans Medium';
-  src: url('/fonts/DMSans/DM_Sans-Medium.ttf') format('truetype');
+  src: url('/fonts/DMSans/DMSans-Medium.ttf') format('truetype');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Sans Bold';
-  src: url('/fonts/DMSans/DM_Sans-Bold.ttf') format('truetype');
+  src: url('/fonts/DMSans/DMSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Sans Italic';
-  src: url('/fonts/DMSans/DM_Sans-Italic.ttf') format('truetype');
+  src: url('/fonts/DMSans/DMSans-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'DM Sans Bold Italic';
-  src: url('/fonts/DMSans/DM_Sans-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/DMSans/DMSans-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'DM Sans Extra Bold';
-  src: url('/fonts/DMSans/DM_Sans-ExtraBold.ttf') format('truetype');
+  src: url('/fonts/DMSans/DMSans-ExtraBold.ttf') format('truetype');
   font-weight: 800;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'DM Sans Black';
+  src: url('/fonts/DMSans/DMSans-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
 }
 
