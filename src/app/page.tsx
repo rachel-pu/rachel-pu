@@ -5,6 +5,7 @@ import { IoDocumentText } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import Navbar from "../../components/navbar";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -29,7 +30,7 @@ export default function Home() {
       <div className="h-screen flex flex-col">
 
             {/* navbar */}
-            <Navbar />
+          <Navbar />
 
           {/* text and animated drawing */}
           <div className=" items-center flex mt-[11.75%] mb-20 mr-auto ml-auto flex-row max-w-[60%] justify-between">
@@ -147,7 +148,8 @@ export default function Home() {
           {/* buttons */}
           <motion.div className="flex flex-row  mb-auto ml-auto mr-auto w-[40%] justify-around p-2"
                       initial={{ transform: "translateY(100px)", opacity: 0 }}
-                      animate={{ transform: "translateY(0px)", opacity: 1}}>
+                      animate={{ transform: "translateY(0px)", opacity: 1}}
+                      transition={{ type: "spring"}}>
 
               {/* resume button */}
               <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
