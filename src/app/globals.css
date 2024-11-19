@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------------------- janitor font ---------------------------- */
+@font-face {
+  font-family: 'Janitor';
+  src: url('/fonts/Janitor.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ---------------------------- dm sans fonts ---------------------------- */
+
+@font-face {
+  font-family: 'DM Sans Regular';
+  src: url('/fonts/DMSans/DM_Sans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans Medium';
+  src: url('/fonts/DMSans/DM_Sans-Medium.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans Bold';
+  src: url('/fonts/DMSans/DM_Sans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans Italic';
+  src: url('/fonts/DMSans/DM_Sans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DM Sans Bold Italic';
+  src: url('/fonts/DMSans/DM_Sans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DM Sans Extra Bold';
+  src: url('/fonts/DMSans/DM_Sans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+/* ---------------------------- Product Sans ---------------------------- */
+@font-face {
+  font-family: 'Product Sans';
+  src: url('/fonts/ProductSans/ProductSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans Medium';
+  src: url('/fonts/ProductSans/ProductSans-Medium.ttf') format('truetype');
+  font-style: normal;
+}
+
+/* ---------------------------- satoshi ---------------------------- */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi/Satoshi-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi Bold';
+  src: url('/fonts/Satoshi/Satoshi-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi Italic';
+  src: url('/fonts/Satoshi/Satoshi-Italic.otf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi Medium';
+  src: url('/fonts/Satoshi/Satoshi-Medium.otf') format('truetype');
+  font-style: normal;
+}
+
+
