@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
       // dot background
-      <div className="bg-[#F3F1EB] h-screen bg-dot-pattern bg-dot-size flex flex-col">
+      <div className="h-screen flex flex-col">
 
             {/* navbar */}
             <Navbar />
@@ -37,18 +37,19 @@ export default function Home() {
               {/* text*/}
               <div className="flex flex-col max-w-[70%]">
                 <motion.h1 className="text-5xl font-janitor text-[#2B2B2B] ml-2"
-                           initial={{ opacity: 0 }}
-                           animate={{ opacity: 1, transition: { duration: 0.8, delay: 0.2 } }}
+                           initial={{ transform: "translateX(-100px)", opacity: 0 }}
+                           animate={{ transform: "translateX(0px)", opacity: 1}}
+                           transition={{ type: "spring" }}
                 >hello! i&#39;m</motion.h1>
                 <motion.p className="text-9xl font-dm-sans-black tracking-tighter text-[#2B2B2B]"
                           initial={{ opacity: 0 }}
-                          animate={{ opacity: 1, transition: { duration: 0.8, delay: 1 } }}
+                          animate={{ opacity: 1, transition: { duration: 0.7, delay: 1 } }}
                 >   Rachel Pu
                 </motion.p>
 
                 <motion.p className="text-2xl font-product-sans text-[#2B2B2B] mt-4 ml-2"
                           initial={{ opacity: 0 }}
-                          animate={{ opacity: 1, transition: { duration: 0.8, delay: 2 } }}
+                          animate={{ opacity: 1, transition: { duration: 0.7, delay: 2 } }}
                           >I’m a 3rd year student majoring in computer science & minoring in digital arts and design at the University of Florida. </motion.p>
               </div>
                 {/* picture */}
@@ -145,8 +146,11 @@ export default function Home() {
 
           {/* buttons */}
           <motion.div className="flex flex-row  mb-auto ml-auto mr-auto w-[40%] justify-around p-2"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1, transition: { duration: 0.8, delay: 3 } }}>
+                      initial={{ transform: "translateY(100px)", opacity: 0 }}
+                      animate={{ transform: "translateY(0px)", opacity: 1}}
+                      transition={{ type: "spring",
+                          stiffness: 80, // Lower value makes it less bouncy
+                          delay: 3,}}>
 
               {/* resume button */}
               <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
@@ -160,7 +164,7 @@ export default function Home() {
 
               {/* linkedin */}
               <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
-                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: '#587BB2', color: '#ECDED6'}}
+                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: 'rgba(88,123,178,0.7)', color: '#ECDED6'}}
                              whileTap={{ scale: 0.95 }}
                              onClick={() => window.open('https://www.linkedin.com/in/rachel-pu-ufl/')}
               >
@@ -170,7 +174,7 @@ export default function Home() {
 
               {/* github */}
               <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
-                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: '#8d65bb', color: '#ECDED6'}}
+                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: 'rgba(141,101,187,0.7)', color: '#f6ede5'}}
                              whileTap={{ scale: 0.95 }}
                              onClick={() => window.open('https://github.com/rachel-pu')}
               >
