@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import { IoDocumentText } from "react-icons/io5";
-
+import { FaLinkedin } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
+import Navbar from "../../components/navbar";
 
 export default function Home() {
 
@@ -26,8 +28,12 @@ export default function Home() {
       // dot background
       <div className="bg-[#F3F1EB] h-screen bg-dot-pattern bg-dot-size flex flex-col">
 
+            {/* navbar */}
+            <Navbar />
+
           {/* text and animated drawing */}
-          <div className="bg-amber-300 items-center flex mt-auto mb-20 mr-auto ml-auto flex-row max-w-[60%] justify-between">
+          <div className=" items-center flex mt-auto mb-20 mr-auto ml-auto flex-row max-w-[60%] justify-between">
+
               {/* text*/}
               <div className="flex flex-col max-w-[70%]">
                 <motion.h1 className="text-5xl font-janitor text-[#2B2B2B] ml-2"
@@ -37,13 +43,16 @@ export default function Home() {
                 <motion.p className="text-9xl font-dm-sans-black tracking-tighter text-[#2B2B2B]"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1, transition: { duration: 0.8, delay: 1 } }}
-                >Rachel Pu</motion.p>
+                >   Rachel Pu
+                </motion.p>
+
                 <motion.p className="text-2xl font-product-sans text-[#2B2B2B] mt-4 ml-2"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1, transition: { duration: 0.8, delay: 2 } }}
                           >I’m a 3rd year student majoring in computer science & minoring in digital arts and design at the University of Florida. </motion.p>
               </div>
                 {/* picture */}
+
               {/*<img src="/vectors/bunny.svg" alt="Rachel Pu" className="max-w-[28%]"/>*/}
 
               <motion.svg
@@ -134,19 +143,40 @@ export default function Home() {
 
           </div>
 
-          <motion.div className="flex flex-row  mt-1 mb-auto ml-auto mr-auto w-[50%] justify-around p-2"
+          {/* buttons */}
+          <motion.div className="flex flex-row  mb-auto ml-auto mr-auto w-[40%] justify-around p-2"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1, transition: { duration: 0.8, delay: 3 } }}>
-              <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-lg flex flex-row items-center justify-center"
-                             whileHover={{ scale: 1.05, backgroundColor: '#ececec', color: '#CB4A31'}}
-                             whileTap={{ scale: 0.95 }}
-              >
 
+              {/* resume button */}
+              <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
+                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: '#7ea663', color: '#ECDED6'}}
+                             whileTap={{ scale: 0.95 }}
+                             onClick={() => window.open('/rachel_pu_resume.pdf')}
+              >
                   <IoDocumentText />
                   <p className="ml-1">Resume</p>
                   </motion.button>
-              <a>Linkedin</a>
-              <a>Github</a>
+
+              {/* linkedin */}
+              <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
+                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: '#587BB2', color: '#ECDED6'}}
+                             whileTap={{ scale: 0.95 }}
+                             onClick={() => window.open('https://www.linkedin.com/in/rachel-pu-ufl/')}
+              >
+                  <FaLinkedin />
+                  <p className="ml-1.5">LinkedIn</p>
+              </motion.button>
+
+              {/* github */}
+              <motion.button className="text-[#2B2B2B] text-2xl font-product-sans pr-4 pt-1 pb-1 pl-4 rounded-3xl flex flex-row items-center justify-center"
+                             whileHover={{ scale: 1.05, transition: { duration: 0.35}, backgroundColor: '#e79090', color: '#ECDED6'}}
+                             whileTap={{ scale: 0.95 }}
+                             onClick={() => window.open('https://github.com/rachel-pu')}
+              >
+                  <SiGithub />
+                  <p className="ml-2">Github</p>
+              </motion.button>
           </motion.div>
       </div>
   );
