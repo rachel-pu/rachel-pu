@@ -5,7 +5,6 @@ import { IoDocumentText } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import Navbar from "../../components/navbar";
-import Link from "next/link";
 
 export default function Home() {
 
@@ -27,30 +26,35 @@ export default function Home() {
 
   return (
       // setting page background
-      <div className="h-screen flex flex-col">
+      <div className="h-screen flex flex-col p-6">
 
             {/* navbar */}
           <Navbar />
 
           {/* text and animated drawing */}
-          <div className=" items-center flex mt-[11.75%] mb-20 mr-auto ml-auto flex-row max-w-[60%] justify-between">
+          <div className=" items-center flex mt-[12%] mb-20 mr-auto ml-auto flex-row max-w-[60%] justify-between">
 
               {/* text*/}
-              <div className="flex flex-col max-w-[70%]">
+              <div className="flex flex-col max-w-[80%]">
                 <motion.h1 className="text-5xl font-janitor text-[#2B2B2B] ml-2"
                            initial={{ transform: "translateX(-100px)", opacity: 0 }}
                            animate={{ transform: "translateX(0px)", opacity: 1}}
                            transition={{ type: "spring" }}
                 >hello! i&#39;m</motion.h1>
+
                 <motion.p className="text-9xl font-dm-sans-black tracking-tighter text-[#2B2B2B]"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1, transition: { duration: 0.7, delay: 1 } }}
-                >   Rachel Pu
+                          initial={{ transform: "translateY(10px)", opacity: 0 }}
+                          animate={{ transform: "translateY(0px)", opacity: 1}}
+                          transition={{delay: 1}}
+                > Rachel Pu
                 </motion.p>
 
-                <motion.p className="text-2xl font-product-sans text-[#2B2B2B] mt-4 ml-2"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1, transition: { duration: 0.7, delay: 2 } }}
+
+
+                  <motion.p className="text-2xl font-product-sans text-[#2B2B2B] mt-4 ml-2"
+                            initial={{ transform: "translateY(10px)", opacity: 0 }}
+                            animate={{ transform: "translateY(0px)", opacity: 1}}
+                            transition={{delay: 1.75}}
                           >I’m a 3rd year student majoring in computer science & minoring in digital arts and design at the University of Florida. </motion.p>
               </div>
                 {/* picture */}
