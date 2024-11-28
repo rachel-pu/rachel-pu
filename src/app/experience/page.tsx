@@ -1,6 +1,6 @@
 import Navbar from "../../../components/navbar";
-import { motion } from "framer-motion";
-import { animate, stagger } from "framer-motion";
+// import { motion } from "framer-motion";
+// import { animate, stagger } from "framer-motion";
 
 export default function Experience()  {
     return(
