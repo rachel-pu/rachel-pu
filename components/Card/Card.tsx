@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import styles from './style.module.scss';
-import { useTransform, motion, useScroll } from 'framer-motion';
+import { useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 
 interface CardProps {
@@ -15,7 +15,7 @@ interface CardProps {
   projectImage: string;
   url: string;
   color: string;
-  progress: any;
+  progress: import('framer-motion').MotionValue<number>;
   range: number[];
   targetScale: number;
 }
@@ -23,10 +23,6 @@ interface CardProps {
 const Card = ({i, title, company, duration, description, technologies, logo, projectImage, url, color, progress, range, targetScale}: CardProps) => {
 
   const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start end', 'start start']
-  })
 
   const scale = useTransform(progress, range, [1, targetScale]);
 
