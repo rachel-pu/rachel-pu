@@ -54,7 +54,7 @@ export default function Home() {
                                 initial={{ transform: "translateY(10px)", opacity: 0 }}
                                 animate={{ transform: "translateY(0px)", opacity: 1}}
                                 transition={{delay: 1}}
-                              >I'm a 3rd year student majoring in computer science & minoring in digital arts and design at the University of Florida. </motion.p>
+                              >I&apos;m a 4th year student majoring in computer science & minoring in digital arts and design at the University of Florida. </motion.p>
                   </div>
                     {/* picture */}
 
