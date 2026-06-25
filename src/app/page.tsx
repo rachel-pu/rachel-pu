@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col p-6">
-      <div className="mt-[12%] max-w-[90%] md:max-w-[60%] mx-auto w-full flex flex-row items-center justify-between gap-8" style={{ userSelect: "none" }}>
+      <div className="mt-[12%] max-w-[90%] md:max-w-[60%] mx-auto w-full flex flex-row items-start justify-between gap-5" style={{ userSelect: "none" }}>
         {/* left column: all text content */}
         <div className="flex flex-col flex-1 min-w-0 mr-12">
           <motion.h1 className="text-3xl font-janitor text-[#2B2B2B]"
@@ -53,7 +53,7 @@ export default function Home() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <motion.p className="text-2xl font-product-sans text-[#2B2B2B] mt-8"
+                <motion.p className="text-lg font-product-sans text-[#2B2B2B] mt-8"
                           initial={{ transform: "translateY(10px)", opacity: 0 }}
                           animate={{ transform: "translateY(0px)", opacity: 1}}
                           transition={{delay: 1}}
@@ -113,7 +113,7 @@ export default function Home() {
 
         {/* bunny on the right */}
         <motion.svg
-          className={`w-[220px] flex-shrink-0 hidden lg:block transition-opacity duration-300 ${showProjects ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+          className={`w-[300px] flex-shrink-0 hidden lg:block transition-opacity duration-300 ${showProjects ? "opacity-0 pointer-events-none" : "opacity-100"}`}
           viewBox="0 0 600 650"
           initial="hidden"
           animate="visible"
