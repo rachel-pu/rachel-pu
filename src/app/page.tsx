@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 import { HiOutlineMail } from "react-icons/hi";
@@ -9,6 +9,7 @@ import Experience from "../components/Experience";
 
 export default function Home() {
     const [showProjects, setShowProjects] = useState(false);
+    const hasLoaded = useRef(false);
 
     const draw = {
       hidden: { pathLength: 0, opacity: 0 },
@@ -52,23 +53,24 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
+              onAnimationComplete={() => { hasLoaded.current = true; }}
               >
                 <motion.p className="text-lg font-product-sans text-[#2B2B2B] mt-8"
                           initial={{ transform: "translateY(10px)", opacity: 0 }}
                           animate={{ transform: "translateY(0px)", opacity: 1}}
-                          transition={{delay: 1}}
+                          transition={{delay: hasLoaded.current ? 0.1 : 1}}
                 >{`I'm a software engineer at `}<a href="https://www.datadoghq.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-[#2B2B2B]/30 hover:text-[#CB4A31] hover:decoration-[#CB4A31] transition-colors duration-200">Datadog</a>{` and a `}<a href="https://www.ufl.edu/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-[#2B2B2B]/30 hover:text-[#CB4A31] hover:decoration-[#CB4A31] transition-colors duration-200">University of Florida</a>{` graduate of 2026 with a Bachelor of Science in Computer Science.`}</motion.p>
 
                 <motion.p className="text-base font-product-sans text-[#2B2B2B]/50 mt-3"
                           initial={{ transform: "translateY(10px)", opacity: 0 }}
                           animate={{ transform: "translateY(0px)", opacity: 1 }}
-                          transition={{delay: 1}}
+                          transition={{delay: hasLoaded.current ? 0.1 : 1}}
                 >volleyball enthusiast · foodie · artist</motion.p>
 
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{delay: 1.3}}
+                  transition={{delay: hasLoaded.current ? 0.2 : 1.3}}
                   className="mt-4"
                 >
                   <button
@@ -82,7 +84,7 @@ export default function Home() {
                 <motion.div className="flex flex-row gap-6 mt-6"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 1.5 }}>
+                            transition={{ delay: hasLoaded.current ? 0.3 : 1.5 }}>
                   <a href="https://www.linkedin.com/in/rachel-pu-ufl/" target="_blank" rel="noopener noreferrer"
                      className="font-product-sans text-base text-[#2B2B2B]/60 hover:text-[#2B2B2B] transition-colors duration-200 underline underline-offset-4 decoration-[#2B2B2B]/20 flex items-center gap-1.5">
                     <FaLinkedin /> LinkedIn
