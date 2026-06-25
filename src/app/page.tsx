@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col p-6">
-      <div className="mt-[12%] max-w-[90%] md:max-w-[60%] mx-auto w-full flex flex-row items-start justify-between gap-8" style={{ userSelect: "none" }}>
+      <div className="mt-[12%] max-w-[90%] md:max-w-[60%] mx-auto w-full flex flex-row items-center justify-between gap-8" style={{ userSelect: "none" }}>
         {/* left column: all text content */}
         <div className="flex flex-col flex-1 min-w-0 mr-12">
           <motion.h1 className="text-3xl font-janitor text-[#2B2B2B]"
