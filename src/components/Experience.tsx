@@ -29,7 +29,7 @@ function ExperienceCard({ experience, index }: { experience: typeof experiences[
         {experience.description}
       </p>
 
-      {experience.links.length > 0 && (
+      {experience.links?.length > 0 && (
         <div className="flex gap-4 mt-1">
           {experience.links.map((link) => (
             <a
@@ -50,14 +50,10 @@ function ExperienceCard({ experience, index }: { experience: typeof experiences[
 
 export default function Experience() {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-[700px] mx-auto">
-        <div className="flex flex-col gap-16">
-          {experiences.map((experience, i) => (
-            <ExperienceCard key={experience.company + experience.title} experience={experience} index={i} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="flex flex-col gap-16 mt-10">
+      {experiences.map((experience, i) => (
+        <ExperienceCard key={experience.company + experience.title} experience={experience} index={i} />
+      ))}
+    </div>
   );
 }

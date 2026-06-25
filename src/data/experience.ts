@@ -13,21 +13,19 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "WiNG.it",
+    title: "HireGator",
     company: "University of Florida",
     duration: "August 2024 - Present",
-    description: "Scaling WiNG.it to a multi-feature career prep platform with Next.js and Firebase, deploying scalable infrastructure aiming to support 2,000+ users at UF. Integrating OpenAI API & Gemini to improve feedback and realism, using predictive models to analyze learning and suggest resources.",
+    description: "AI-powered platform for students to practice interviews and networking with personalized feedback.",
     links: [
-      { label: "GitHub", url: "https://github.com/rachel-pu/WiNGit" },
+      { label: "Website", url: "https://hiregator.org" },
     ],
   },
   {
-    title: "AI Undergraduate Researcher",
+    title: "XAI Research Framework",
     company: "Florida Institute for National Security (FINS)",
-    duration: "March 2024 - May 2025",
-    description: "Conducted XAI graduate research and co-developing framework benchmarking 180+ explainable methods to enhance user clarity. Engineered a recommender system with Python, SciPy & HiPerGator, integrated with an XAI database for improved interpretability.",
-    links: [
-      { label: "GitHub", url: "https://github.com/rachel-pu" },
-    ],
+    duration: "Mar 2024 - May 2025",
+    description: "Benchmarked 180+ explainability methods and built a recommender system with Python and HiPerGator.",
+    links: [],
   },
 ];
