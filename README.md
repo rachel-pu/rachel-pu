@@ -1,5 +1,5 @@
 hi i'm rachel
 
-i am a senior at the university of florida 🐊
+i'm a university of florida 🐊 2026 graduate!
 
 i like to code 
